@@ -2,13 +2,13 @@
 export libx264, x264
 
 JLLWrappers.@generate_wrapper_header("x264")
-JLLWrappers.@declare_library_product(libx264, "libx264-164.dll")
+JLLWrappers.@declare_library_product(libx264, "libx264-165.dll")
 JLLWrappers.@declare_executable_product(x264)
 function __init__()
     JLLWrappers.@generate_init_header()
     JLLWrappers.@init_library_product(
         libx264,
-        "bin\\libx264-164.dll",
+        "bin\\libx264-165.dll",
         RTLD_LAZY | RTLD_DEEPBIND,
     )
 
